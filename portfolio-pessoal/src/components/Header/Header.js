@@ -5,19 +5,27 @@ import iconGithubPreto from "../../assets/icon-github-preto.svg";
 import iconLinkedin from "../../assets/icon-linkedin.svg";
 
 import { HeaderContainer } from "./HeaderStyles";
+import { useHistory } from "react-router-dom";
 
-export const Header = ({ children }) => {
+export const Header = ({ children, ProjectsPage }) => {
   const { darkIsOn, setDarkIsOn } = useScreenMode();
+  const history = useHistory();
   return (
     <HeaderContainer darkMode={darkIsOn}>
       <header>
         <nav>
           <ul>
-            <li>Meus projetos</li>
+            {!ProjectsPage ? (
+              <li onClick={() => history.push("/projetos")}>Projetos</li>
+            ) : (
+              <li onClick={() => history.push("/")}>home</li>
+            )}
           </ul>
         </nav>
 
-        <h2 className="headerTitle">Leonardo Cabral</h2>
+        <h2 className="headerTitle" onClick={() => history.push("/")}>
+          Leonardo Cabral
+        </h2>
 
         <ul className="contactHeader">
           <li>
