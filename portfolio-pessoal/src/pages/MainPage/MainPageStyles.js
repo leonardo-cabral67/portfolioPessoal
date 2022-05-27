@@ -89,7 +89,7 @@ export const MainPageContainer = styled.div`
     box-shadow: 0 1px 5px #d3d3d3;
   }
 
-  @media (min-width: 367px) and (max-width: 860px) {
+  @media (max-width: 860px) {
     .presentation {
       display: flex;
       flex-direction: column;
