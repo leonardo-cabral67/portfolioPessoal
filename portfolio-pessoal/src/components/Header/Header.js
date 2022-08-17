@@ -16,9 +16,9 @@ export const Header = ({ children, ProjectsPage }) => {
         <nav>
           <ul>
             {!ProjectsPage ? (
-              <li onClick={() => history.push("/projetos")}>Projetos</li>
+              <li onClick={() => history.push("/projetos")}>PROJETOS</li>
             ) : (
-              <li onClick={() => history.push("/")}>home</li>
+              <li onClick={() => history.push("/")}>HOME</li>
             )}
           </ul>
         </nav>

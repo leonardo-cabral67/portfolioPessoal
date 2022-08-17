@@ -5,9 +5,6 @@ export const HeaderContainer = styled.div`
     0% {
       background-color: #fff;
     }
-    50% {
-      background-color: #d3d3d3;
-    }
     100% {
       background-color: #000;
     }
@@ -29,8 +26,8 @@ export const HeaderContainer = styled.div`
   color: ${({ darkMode }) => (darkMode ? "#fff" : "#000")};
   animation: ${({ darkMode }) =>
     darkMode
-      ? "changeBackgroundColorToBlack 1.3s linear;"
-      : "changeBackgroundColorToWhite 1.3s linear"};
+      ? "changeBackgroundColorToBlack 0.5s linear;"
+      : "changeBackgroundColorToWhite 0.6s linear"};
   header {
     width: 80%;
     margin: 0 auto;
@@ -97,7 +94,7 @@ export const HeaderContainer = styled.div`
     border-radius: 6px;
     padding: 6px;
     cursor: pointer;
-    transition: 0.7s;
+    transition: 0.3s;
     color: ${({ darkMode }) => (darkMode ? "#fff" : "#000")};
 
     &:hover {
